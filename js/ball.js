@@ -68,6 +68,8 @@ Ball.prototype.collisionDetect = function(){
 
 var balls = [];
 function loop () {
+	var evil = new EvilCircle();
+	evil.setControls();
 	ctx.fillStyle = 'rgba(0,0,0,0.25)';
 	ctx.fillRect(0,0,width,height);
 	while(balls.length < 20){
@@ -75,9 +77,14 @@ function loop () {
 		balls.push(ball);
 	}
 	for(i = 0; i < balls.length; i++){
-		balls[i].draw();
-		balls[i].update();
-		balls[i].collisionDetect();
+		if(balls[i].exists = true){
+			balls[i].draw();
+			balls[i].update();
+			balls[i].collisionDetect();
+			evil.draw();
+			evil.checkBounds();
+			evil.collisionDetect();
+		}
 	}
 	requestAnimationFrame(loop);
 }
@@ -101,7 +108,7 @@ EvilCircle.prototype.draw = function(){
 	ctx.arc(this.x,this.y,this.size,0,2*Math.PI);
 	ctx.stroke();
 };
-EvilCircle.prototype.update = function(){
+EvilCircle.prototype.checkBounds = function(){
 	if((this.x + this.size) >= width){
 		this.velX = -(this.velX);
 	}
