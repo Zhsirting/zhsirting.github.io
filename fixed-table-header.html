@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*第一种*/
+			.tb_table{
+				float: left;
+			    width: 500px;
+			    table-layout: fixed;
+			    border-collapse: collapse;
+			}
+			
+			.tb_table thead {
+			  background: black;
+			  color:#fff;
+			}
+			
+			.tb_table tbody{
+			  display:block;
+			  width: 100%;
+			  overflow: auto;
+			  height: 100px;
+			}
+			
+			.tb_table thead tr {
+			   display: block;
+			}
+			
+			.tb_table th, .tb_table td {
+			  text-align: center;
+			  width: 200px;
+			}
+			/*第二种*/
+			.tb1_table{
+				float: right;
+			    width: 500px;
+			    table-layout: fixed;
+			    border-collapse: collapse;
+			}
+			
+			.tb1_table thead {
+			  background: black;
+			  color:#fff;
+			}
+			
+			.dv_table{
+			  width: 500px;
+			  height: 100px;
+			  overflow: auto;
+			}
+			
+			 .tb2_table td {
+			  text-align: center;
+			  width: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--第一种-->
+		<table class="tb_table">
+		  	<thead>
+			    <tr>
+			      	<th>Col 1</th>
+			      	<th>Col 2</th>
+			      	<th>Col 3</th>
+			      	<th>Col 4</th>
+			      	<th>Col 5</th>
+			    </tr>
+			</thead>
+			<tbody>
+			    <tr>
+			      	<td>row 1-1</td>
+			      	<td>row 1-2</td>
+			      	<td>row 1-3</td>
+			      	<td>row 1-4</td>
+			      	<td>row 1-5</td>
+			    </tr>
+			    <tr>
+			      	<td>row 2-1</td>
+			      	<td>row 2-2</td>
+			      	<td>row 2-3</td>
+			      	<td>row 2-4</td>
+			      	<td>row 2-5</td>
+			    </tr>
+			    <tr>
+			      <td>row 3-1</td>
+			      <td>row 3-2</td>
+			      <td>row 3-3</td>
+			      <td>row 3-4</td>
+			      <td>row 3-5</td>
+			    </tr>
+			    <tr>
+			      	<td>row 4-1</td>
+			      	<td>row 4-2</td>
+			      	<td>row 4-3</td>
+			      	<td>row 4-4</td>
+			      	<td>row 4-5</td>
+			    </tr>
+			    <tr>
+			      	<td>row 5-1</td>
+			      	<td>row 5-2</td>
+			      	<td>row 5-3</td>
+			      	<td>row 5-4</td>
+			      	<td>row 5-5</td>
+			    </tr>
+			    <tr>
+			      	<td>row 6-1</td>
+			      	<td>row 6-2</td>
+			      	<td>row 6-3</td>
+			      	<td>row 6-4</td>
+			      	<td>row 6-5</td>
+			    </tr>
+			    <tr>
+			      	<td>row 7-1</td>
+			      	<td>row 7-2</td>
+			      	<td>row 7-3</td>
+			      	<td>row 7-4</td>
+			      	<td>row 7-5</td>
+			    </tr>
+		  	</tbody>
+		</table>
+		<!--第二种-->
+		<table class="tb1_table">
+		  <thead>
+		    <tr>
+		      <th>Col 1</th>
+		      <th>Col 2</th>
+		      <th>Col 3</th>
+		      <th>Col 4</th>
+		      <th>Col 5</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr colspan="5">
+		      <td>
+		        <div class="dv_table">
+		          <table class="tb2_table">
+		            <tbody>
+		              <tr>
+		                <td>row 1-1</td>
+		                <td>row 1-2</td>
+		                <td>row 1-3</td>
+		                <td>row 1-4</td>
+		                <td>row 1-5</td>
+		              </tr>
+		              <tr>
+		                <td>row 2-1</td>
+		                <td>row 2-2</td>
+		                <td>row 2-3</td>
+		                <td>row 2-4</td>
+		                <td>row 2-5</td>
+		              </tr>
+		              <tr>
+		                <td>row 3-1</td>
+		                <td>row 3-2</td>
+		                <td>row 3-3</td>
+		                <td>row 3-4</td>
+		                <td>row 3-5</td>
+		              </tr>
+		              <tr>
+		                <td>row 4-1</td>
+		                <td>row 4-2</td>
+		                <td>row 4-3</td>
+		                <td>row 4-4</td>
+		                <td>row 4-5</td>
+		              </tr>
+		              <tr>
+		                <td>row 5-1</td>
+		                <td>row 5-2</td>
+		                <td>row 5-3</td>
+		                <td>row 5-4</td>
+		                <td>row 5-5</td>
+		              </tr>
+		              <tr>
+		                <td>row 6-1</td>
+		                <td>row 6-2</td>
+		                <td>row 6-3</td>
+		                <td>row 6-4</td>
+		                <td>row 6-5</td>
+		              </tr>
+		              <tr>
+		                <td>row 7-1</td>
+		                <td>row 7-2</td>
+		                <td>row 7-3</td>
+		                <td>row 7-4</td>
+		                <td>row 7-5</td>
+		              </tr>
+		            </tbody>
+		          </table>
+		        </div>
+		      </td>
+		    </tr> 
+		  </tbody>
+</table>
+	</body>
+</html>

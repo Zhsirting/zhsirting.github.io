@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h3>third title</h3>
+		<p>paragraph</p>
+		<script>
+			console.log(document.querySelector('body').childNodes);
+			function domComb (parent,callback) {
+				if (parent.hasChildNodes()) {
+					for (var node = parent.firstChild;node;node = node.nextSibling) {
+						domComb(node,callback);
+					}
+				}
+				callback.call(parent);
+			}
+			function printContent () {
+				if (this.nodeValue) {
+					console.log(this.nodeValue);
+				}
+			}
+			domComb(document.body,printContent);
+		</script>	
+	</body>
+</html>
